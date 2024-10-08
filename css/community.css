@@ -1,0 +1,132 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    background: #ffffff;   
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center;
+    align-items: center;
+}
+
+.user-card {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px; /* Reduced padding */
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 450px; /* Ensure a max width */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 20px -5px rgba(0,0,0,0.5);
+}
+
+.user-card:before {
+    content: '';
+    position: absolute;
+    height: 300%;
+    width: 200px;
+    background: #706d6d;
+    top: -60px;
+    left: -125px;
+    z-index: 0;
+    transform: rotate(17deg);
+}
+
+.user-card-img {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    z-index: 3;
+}
+
+.user-card-img img {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.352);
+    border-radius: 5%;
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Limit max size */
+    
+}
+
+.user-card-img img {
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.user-card-img img:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.352); /* Subtle shadow on hover */
+    transform: translateY(-3px);
+    border-radius: 5%;
+}
+
+.user-card-info {
+    text-align: center;
+}
+
+.user-card-info h2 {
+    font-size: 20px; /* Reduced font size */
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-card-info p {
+    font-size: 15px; /* Reduced font size */
+    margin-bottom: 2px;
+}
+
+.user-card-info p span {
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    .user-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }   
+    .user-card-img {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .user-card-info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        padding-top: 3%;
+    }
+
+    .user-card:before {
+        width: 300%;
+        height: 200px;
+        transform: rotate(0);
+    }
+
+    .user-card-info h2 {
+        margin-top: 15px; /* Reduced margin */
+        font-size: 28px; /* Adjusted font size */
+    }
+
+    .user-card-info p span {
+        display: block;
+        margin-bottom: 10px; /* Reduced margin */
+        font-size: 20px; /* Adjusted font size */
+    }
+
+    
+}
+ 

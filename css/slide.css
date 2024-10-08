@@ -1,0 +1,61 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff; /* Fixed missing '#' */
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+.swiper {
+  margin-top: 10px;
+  width: 70%;  /* Default width */
+  height: 80%; /* Default height */
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .swiper {
+    width: 80%;  /* Adjust width for smaller devices */
+    height: 60%; /* Adjust height for smaller devices */
+  }
+}
+
+/* For very small screens (like phones) */
+@media (max-width: 480px) {
+  .swiper {
+    width: 90%; /* Full width for very small screens */
+    height: 50%; /* Adjust height for very small screens */
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width */
+  height: auto; /* Let height adjust automatically */
+  background-size: cover; /* Ensure the background covers the slide */
+  background-position: center; /* Center the background image */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;  /* Full width for images */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the space without distortion */
+}
+
+/* Optional: Add padding for better spacing on small devices */
+@media (max-width: 480px) {
+  .swiper-slide {
+    padding: 5px; /* Add padding for small screens */
+  }
+}

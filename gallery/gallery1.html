@@ -1,0 +1,142 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="style.css">
+     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <nav>
+        <div class="img">
+                <img src="assets/icon/logo.png" alt="LOGO" width="100px">
+        </div>
+        <div class="judul">
+            <h2>
+                HIMBIDIG FE UNMUHA<br>
+                <sub><em>kabinet Aquila 2025-2025</em></sub>
+                
+            </h2>
+        </div>
+
+       
+
+        <div id="menu-icon" class="menu-icon">
+            <i class="ph ph-list"></i>
+        </div>
+
+        <ul id="menu-list" class="hidden">
+            <li></li>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+            <li>
+                <a href="#page3">Event</a>
+            </li>
+            <li>
+                <a href="#page4">About Us</a>
+            </li>
+            <li>
+                <a href="#page5">Comunity</a>
+            </li>
+        </ul>
+    </nav>
+
+<div>
+<div class="container">
+    <div class="slide">
+        <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
+            <div class="content">
+                <div class="name">Switzerland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button onclick="">See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
+            <div class="content">
+                <div class="name">Finland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button onclick="">See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);">
+            <div class="content">
+                <div class="name">Iceland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button onclick="">See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
+            <div class="content">
+                <div class="name">Australia</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button onclick="">See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+            <div class="content">
+                <div class="name">Netherland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button onclick="">See More</button>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+            <div class="content">
+                <div class="name">Ireland</div>
+                <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                <button onclick="">See More</button>
+            </div>
+        </div>
+        <div class="button" hidden>
+        
+            <button onclick="" class="next"><i class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="" class="prev"><i class="fa-solid fa-arrow-right"></i></button>
+           
+        </div>  
+    </div>
+   
+</div>
+</div>
+
+<main>
+    <H1>LOREM</H1>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eum expedita ea, quam modi corrupti perferendis vel hic totam incidunt natus, eos, at ad consequuntur animi labore beatae laudantium dolorem.</P>
+</main>
+
+
+
+
+
+
+
+<script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    
+    // Function to slide to the next item
+    function slideNext() {
+        let items = document.querySelectorAll('.item');
+        document.querySelector('.slide').appendChild(items[0]);
+    }
+    
+    // Function to slide to the previous item
+    function slidePrev() {
+        let items = document.querySelectorAll('.item');
+        document.querySelector('.slide').prepend(items[items.length - 1]);
+    }
+    
+    // Event listeners for manual sliding
+    next.addEventListener('click', slideNext);
+    prev.addEventListener('click', slidePrev);
+    
+    // Auto slide every 3 seconds
+    setInterval(slideNext, 5000);
+    </script>
+    
