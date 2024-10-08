@@ -20,6 +20,17 @@
 }
 
 
+.overlay-visitor {
+    position: fixed;
+    right: 10px;
+    font-family: sans-serif;
+    color: #191919;
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 
 /*
 

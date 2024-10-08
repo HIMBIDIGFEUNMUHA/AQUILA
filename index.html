@@ -61,37 +61,7 @@
                     <script src="page.js"></script>
                     <div>
                         
-                        <div>
-                            VISITORS: <span id="value">Loading...</span>
-                        </div>
-                        <script>
-                            function fetchCount() {
-                                let xhr = new XMLHttpRequest();
-                                xhr.open("GET", "https://abacus.jasoncameron.dev/hit/himbidigfeunmuha.github.ioaquila/awesomeclick");
-                                xhr.responseType = "json";
                         
-                                xhr.onload = function() {
-                                    if (xhr.status === 200) {
-                                        // Update the value span with the response
-                                        document.getElementById("value").textContent = this.response.value;
-                                        document.getElementById("clickCount").textContent = ``;
-                                    } else {
-                                        console.error('Error fetching data:', xhr.status, xhr.statusText);
-                                        document.getElementById("clickCount").textContent = 'Error fetching click count.';
-                                    }
-                                };
-                        
-                                xhr.onerror = function() {
-                                    console.error('Request failed');
-                                    document.getElementById("clickCount").textContent = 'Request failed.';
-                                };
-                        
-                                xhr.send();
-                            }
-                        
-                            // Fetch count when the page loads
-                            window.onload = fetchCount;
-                        </script>
                         
                     </div>
                 </h1>
@@ -102,7 +72,7 @@
         </div>
     </main>
     <a href="#top" class="back-to-top">↑ Top</a>
-    <a href="#" id="backToTopBtn">↑</a>
+    <a href="#" id="backToTopBtn"></a>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -123,7 +93,9 @@
             </li>
         </ul>
         <br>
-        &copy; 2024-2025 Himpunan Mahasiswa Bisnis Digital FE Unmuha. Created By <em>Achmed Basith</em>
+        &copy; 2024-2025 Himpunan Mahasiswa Bisnis Digital FE Unmuha. Creator <em>Achmed Basith</em>.
+
+            
     </footer>
 </body>
 </html>
