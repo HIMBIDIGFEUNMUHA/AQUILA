@@ -1,3 +1,26 @@
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: none; /* Hidden by default */
+}
+
+.back-to-top:hover {
+    opacity: 1;
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+
+
+/*
+
 #backToTopBtn {
     position: fixed;
     bottom: 20px;
@@ -10,43 +33,46 @@
     height: 50px;
     font-size: 24px;
     text-align: center;
-    line-height: 50px; /* Center the text vertically */
+    line-height: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and transform */
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Show the button when scrolled down */
 body {
-    height: 500px; /* For demonstration */
+    height: 500px; 
 }
 
 body:has(:target) #backToTopBtn {
-    display: block; /* Show button if target is active */
+    display: block;
 }
 
 #backToTopBtn:hover {
-    opacity: 0.8; /* Slightly fade out on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    opacity: 0.8; 
+    transform: scale(1.1) translateX(-5px);
+    width: 80px;
+    height: 50px;
+    border-radius: 0;
+    border-radius: 50px;
+    animation-duration: 1.4s;
 }
 
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Fade in effect when the button appears */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px); /* Start slightly lower */
+        transform: translateY(10px); 
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Move to original position */
+        transform: translateY(0); 
     }
 }
 
 body:has(:target) #backToTopBtn {
     display: block;
-    animation: fadeIn 0.3s ease; /* Add fade-in animation */
+    animation: fadeIn 0.3s ease; 
 }
+*/
