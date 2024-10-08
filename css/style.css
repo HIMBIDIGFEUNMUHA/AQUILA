@@ -396,3 +396,10 @@ button:hover {
     border-bottom: 1px solid #007BFF;;
     color: #007BFF;
 }
+
+.visit {
+    color: #191919;
+}
+.visit:hover {
+    color: #191919;
+}
