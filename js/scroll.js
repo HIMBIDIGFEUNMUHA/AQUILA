@@ -10,11 +10,7 @@ window.onscroll = function() {
 
 // Fungsi untuk scroll ke atas
 function scrollToTop() {
-    // Use smooth scroll behavior
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+    document.body.scrollIntoView({ behavior: 'smooth' });
 }
 
 // Event listener untuk tombol
