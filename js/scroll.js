@@ -10,14 +10,11 @@ window.onscroll = function() {
 
 // Fungsi untuk scroll ke atas
 function scrollToTop() {
-    const scrollStep = -window.scrollY / (2000 / 50); // Menghitung langkah scroll
-    const scrollInterval = setInterval(() => {
-        if (window.scrollY !== 0) {
-            window.scrollBy(0, scrollStep);
-        } else {
-            clearInterval(scrollInterval);
-        }
-    }, 15);
+    // Use smooth scroll behavior
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
 // Event listener untuk tombol
