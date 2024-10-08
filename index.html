@@ -57,7 +57,44 @@
     <main>
         <div class="media-container">
             <div class="lembar">
-                <h1 class="jdl">INDEX</h1>
+                <h1 class="jdl">
+                    <script src="page.js"></script>
+                    <div>
+                        
+                        <div>
+                            VISITORS: <span id="value">Loading...</span>
+                        </div>
+                        <script>
+                            function fetchCount() {
+                                let xhr = new XMLHttpRequest();
+                                xhr.open("GET", "https://abacus.jasoncameron.dev/hit/himbidigfeunmuha.github.ioaquila/awesomeclick");
+                                xhr.responseType = "json";
+                        
+                                xhr.onload = function() {
+                                    if (xhr.status === 200) {
+                                        // Update the value span with the response
+                                        document.getElementById("value").textContent = this.response.value;
+                                        document.getElementById("clickCount").textContent = ``;
+                                    } else {
+                                        console.error('Error fetching data:', xhr.status, xhr.statusText);
+                                        document.getElementById("clickCount").textContent = 'Error fetching click count.';
+                                    }
+                                };
+                        
+                                xhr.onerror = function() {
+                                    console.error('Request failed');
+                                    document.getElementById("clickCount").textContent = 'Request failed.';
+                                };
+                        
+                                xhr.send();
+                            }
+                        
+                            // Fetch count when the page loads
+                            window.onload = fetchCount;
+                        </script>
+                        
+                    </div>
+                </h1>
                 <section class="jdl2">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eum expedita ea, quam modi corrupti perferendis vel hic totam incidunt natus, eos, at ad consequuntur animi labore beatae laudantium dolorem.</p>
               </section>
