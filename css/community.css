@@ -23,8 +23,8 @@ body {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px; /* Reduced padding */
-    width: 90%; /* Adjust width for smaller screens */
-    max-width: 450px; /* Ensure a max width */
+    width: 100%; /* Adjust width for smaller screens */
+    max-width: 400px; /* Ensure a max width */
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 20px -5px rgba(0,0,0,0.5);
@@ -62,12 +62,13 @@ body {
 .user-card-img img {
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
-
+/*
 .user-card-img img:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.352); /* Subtle shadow on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.352);
     transform: translateY(-3px);
     border-radius: 5%;
 }
+*/
 
 .user-card-info {
     text-align: center;
